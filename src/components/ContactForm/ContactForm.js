@@ -22,12 +22,23 @@ const ContactForm = () => {
 
     useEffect(() => {
         const fetchBookedSlots = async () => {
-            const { data, error } = await supabase.from("appointments").select("time");
-            if (error) console.error("Error fetching booked slots:", error);
-            else setBookedSlots(data.map((slot) => slot.time));
+            if (!formData.date) return;
+    
+            const { data, error } = await supabase
+                .from("appointments")
+                .select("time")
+                .eq("date", formData.date); // Fetch slots booked for the selected date
+    
+            if (error) {
+                console.error("Error fetching booked slots:", error);
+            } else {
+                setBookedSlots(data.map((slot) => slot.time));
+            }
         };
+    
         fetchBookedSlots();
-    }, []);
+    }, [formData.date]); // Fetch booked slots when the selected date changes
+    
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -76,16 +87,20 @@ const ContactForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         if (validateForm()) {
-            const { error } = await supabase.from("appointments").insert([{ time: formData.time }]);
-
+            const { error } = await supabase
+                .from("appointments")
+                .insert([{ date: formData.date, time: formData.time }]); // Store both date and time
+    
             if (error) {
                 console.error("Error booking appointment:", error);
                 alert("Error booking appointment. Please try again.");
             } else {
                 alert("Appointment booked successfully!");
-
+                setBookedSlots([...bookedSlots, formData.time]); // Update booked slots for selected date
+    
+                // Open WhatsApp message with booking details
                 const whatsappMessage = `Hello, I would like to book an appointment. Here are my details:
                 - Name: ${formData.name}
                 - Email: ${formData.email}
@@ -94,18 +109,18 @@ const ContactForm = () => {
                 - Time: ${formData.time}
                 - Service: ${formData.service}
                 - Department: ${formData.department}`;
-
-                const phoneNumber = "+917796308778"; // Replace with your WhatsApp number
+    
+                const phoneNumber = "+917796308778";
                 const encodedMessage = encodeURIComponent(whatsappMessage);
                 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
+    
                 window.open(whatsappURL, "_blank");
-
-                setBookedSlots([...bookedSlots, formData.time]);
+    
                 setFormData({ name: "", email: "", phone: "", date: "", time: "", service: "", department: "" });
             }
         }
     };
+    
 
     return (
         <form onSubmit={handleSubmit} className="contact-form">
@@ -188,6 +203,19 @@ const ContactForm = () => {
                 />
                 {errors.date && <small className="error-text">{errors.date}</small>}
             </div>
+            <div className="form-group">
+    <label htmlFor="time">Select Time</label>
+    <select name="time" className="form-control" value={formData.time} onChange={handleChange} required>
+        <option value="">Select a Time Slot</option>
+        {timeSlots.map((slot, index) => (
+            <option key={index} value={slot} disabled={bookedSlots.includes(slot)}>
+                {slot} {bookedSlots.includes(slot) ? "(Booked)" : ""}
+            </option>
+        ))}
+    </select>
+    {errors.time && <small className="error-text">{errors.time}</small>}
+</div>
+
 
             <button type="submit" className="btn appointment-btn">Book an Appointment</button>
         </form>
