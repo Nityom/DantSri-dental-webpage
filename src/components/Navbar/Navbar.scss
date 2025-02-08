@@ -1,0 +1,76 @@
+@import './../../sass/fonts.scss';
+@import './../../sass/colors.scss';
+
+.main-nav {
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    background: $color-white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
+    display: flex;
+    justify-content: center; // Keeps navbar centered
+}
+
+
+
+.navbar {
+    width: 90%; // Keeps navbar width fixed
+    max-width: 1200px; // Ensures navbar doesn't grow beyond this
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Ensures proper alignment
+}
+
+.navbar-brand {
+    flex: 0 0 auto; // Prevents stretching
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 300px; // You can increase this size
+        height: auto;
+        max-height: 110px; // Ensures it doesn't get too large
+        object-fit: contain;
+    }
+}
+
+.navbar-nav {
+    display: flex;
+    flex: 1; // Takes available space but prevents overflow
+    justify-content: center;
+
+    .nav-item {
+        .nav-link {
+            color: $color-black;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 5px 10px;
+            margin: 5px 10px;
+
+            &:hover {
+                color: $color-blue;
+            }
+        }
+    }
+}
+
+.theme-btn {
+    flex: 0 0 auto; // Prevents button from affecting width
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        width: 95%; 
+        max-width: 600px;
+    }
+
+    .navbar-brand img {
+        width: 180px; // Adjust for smaller screens
+        max-height: 80px;
+    }
+}

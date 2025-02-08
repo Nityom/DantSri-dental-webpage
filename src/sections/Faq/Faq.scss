@@ -1,0 +1,38 @@
+
+@import '../../sass/colors.scss';
+.faq-section {
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .accordion-item {
+        .accordion-header {
+           .accordion-button {
+                font-weight: 600;
+           }
+        }
+    }
+}
+
+.show-more-btn {
+    background-color: #583FBC;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #452a9a;
+    }
+}
+
+
+// Mobile Responsive
+@media (max-width: 575px) {
+    .faq-section {
+        padding-bottom: 50px;
+    }
+}
