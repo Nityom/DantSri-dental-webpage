@@ -73,7 +73,7 @@ const ContactForm = () => {
     };
 
     const timeSlots = generateTimeSlots();
-    console.log(timeSlots);  
+    // console.log(timeSlots);  
 
     const validateForm = () => {
         let newErrors = {};

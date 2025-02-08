@@ -3,8 +3,8 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import './Services.scss';
 import ServicesData from './ServiceData';
 import Service from '../../components/Service/Service';
-import { Link } from 'react-router-dom';
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+// import { Link } from 'react-router-dom';
+// import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 
 const Services = () => {
@@ -23,7 +23,7 @@ const Services = () => {
 
                 <div className="row">
                     {
-                        ServicesData.map(singleService => <Service serviceList={singleService}/>)
+                        ServicesData.map((singleService,index) => <Service key ={index} serviceList={singleService}/>)
                     }
                 </div>
             </div>

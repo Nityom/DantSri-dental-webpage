@@ -1,36 +1,36 @@
 import React from 'react';
-import logo from '../../assets/footer_logo.png';
+// import logo from '../../assets/footer_logo.png';
 import './Footer.scss';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube} from "react-icons/fa";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import call from '../../assets/footer/calling.png';
 import time from '../../assets/footer/time.png';
 import location from '../../assets/footer/location.png';
 
 const Footer = () => {
 
-    const footerMenu = [
-        {
-            'name' : 'About Us',
-            'link' : '/'
-        },
-        {
-            'name' : 'Dental Services',
-            'link' : '/'
-        },
-        {
-            'name' : 'Dentist',
-            'link' : '/'
-        },
-        {
-            'name' : 'Blogs',
-            'link' : '/'
-        },
-        {
-            'name' : 'FAQs',
-            'link' : '/'
-        }
-    ];
+    // const footerMenu = [
+    //     {
+    //         'name' : 'About Us',
+    //         'link' : '/'
+    //     },
+    //     {
+    //         'name' : 'Dental Services',
+    //         'link' : '/'
+    //     },
+    //     {
+    //         'name' : 'Dentist',
+    //         'link' : '/'
+    //     },
+    //     {
+    //         'name' : 'Blogs',
+    //         'link' : '/'
+    //     },
+    //     {
+    //         'name' : 'FAQs',
+    //         'link' : '/'
+    //     }
+    // ];
 
     const footerContacts = [
         {
@@ -90,23 +90,23 @@ const Footer = () => {
                         </div> */}
                     </div>
                     <div className="col-lg-4 col-md-5">
-                        <div className="footer-contact">
-                            <p>Contact & Information</p>
+                    <div className="footer-contact">
+    <p>Contact & Information</p>
+    {
+        footerContacts.map((footerContact, index) => (
+            <div className="contact-list" key={index}>
+                <div className="contact-icon">
+                    <img src={footerContact.icon} alt="call" />
+                </div>
+                <div className="contact-text">
+                    <p>{footerContact.title}</p>
+                    <h5>{footerContact.info}</h5>
+                </div>
+            </div>
+        ))
+    }
+</div>
 
-                            {
-                                footerContacts.map(footerContact => {
-                                    return  <div className="contact-list">
-                                                <div className="contact-icon">
-                                                    <img src={footerContact.icon} alt="call" />
-                                                </div>
-                                                <div className="contact-text">
-                                                    <p>{footerContact.title}</p>
-                                                    <h5>{footerContact.info}</h5>
-                                                </div>
-                                            </div>
-                                })
-                            }
-                        </div>
                     </div>
                 </div>
 
