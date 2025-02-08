@@ -59,7 +59,7 @@ const ServiceBanner = () => {
                         {/* Right Image (Alternates) */}
                         <div className={`col-lg-7 col-md-6 ${index % 2 !== 0 ? 'order-lg-1' : ''}`} data-aos="fade-up" data-aos-duration="2000">
                             <div className="service-banner-img">
-                                <img src={service.image} alt={service.title} />
+                                <img src={service.image} alt={service.title} loading='lazy' />
                             </div>
                         </div>
                     </div>

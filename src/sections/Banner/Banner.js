@@ -1,6 +1,6 @@
 import React from 'react';
 import './Banner.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import icon from '../../assets/banner/icons/Calling.png';
 import bannerImg from '../../assets/banner/1.png';
 import doctorImg from '../../assets/banner/doctor.png';
@@ -11,7 +11,6 @@ import shapeThree from '../../assets/banner/vector_03.png';
 import shapeFour from '../../assets/banner/pattern.png';
 
 const Banner = () => {
-
     return (
         <section className='section-bg section-common banner-section'>
             <div className="d-table">
@@ -20,8 +19,12 @@ const Banner = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="banner-text" data-aos="fade-up" data-aos-duration="2000">
-                                <h1>Your Smile Deserves the Best at DantSri</h1>
-<p>At DantSri, we prioritize your dental health and aesthetics. Our skilled team is dedicated to providing personalized care using advanced technology in a warm and welcoming environment. We are here to help you achieve and maintain a beautiful smile.</p>
+                                    <h1>Your Smile Deserves the Best at DantSri</h1>
+                                    <p>
+                                        At DantSri, we prioritize your dental health and aesthetics. Our skilled team is dedicated 
+                                        to providing personalized care using advanced technology in a warm and welcoming environment. 
+                                        We are here to help you achieve and maintain a beautiful smile.
+                                    </p>
 
                                     <div className="banner-bottom">
                                         <div className="theme-btn">
@@ -30,7 +33,7 @@ const Banner = () => {
 
                                         <div className="banner-call">
                                             <div className='icon'>
-                                                <img src={icon} alt="icon" />
+                                                <img src={icon} alt="icon" loading="lazy" />
                                             </div>
                                             <div className='call-text'>
                                                 <p>Dental Care</p>
@@ -44,11 +47,11 @@ const Banner = () => {
                             <div className="col-lg-6">
                                 <div className="banner-img-area" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
                                     <div className="banner-img">
-                                        <img src={bannerImg} alt="banner model" />
+                                        <img src={bannerImg} alt="banner model" loading="lazy" />
                                     </div>
                                     <div className='info-box'>
                                         <div className="info-img">
-                                            <img src={doctorImg} alt="doctor" width={100}  />
+                                            <img src={doctorImg} alt="doctor" width={100} loading="lazy" />
                                         </div>
                                         <div className='info-text'>
                                             <p>Dr. Jyoti </p>
@@ -58,10 +61,10 @@ const Banner = () => {
 
                                     {/* Vector Shapes */}
                                     <div className="shapes">
-                                        <img src={shapeOne} alt="shape" />
-                                        <img src={shapeTwo} alt="shape" />
-                                        <img src={shapeThree} alt="shape" />
-                                        <img src={shapeFour} alt="shape" />
+                                        <img src={shapeOne} alt="shape" loading="lazy" />
+                                        <img src={shapeTwo} alt="shape" loading="lazy" />
+                                        <img src={shapeThree} alt="shape" loading="lazy" />
+                                        <img src={shapeFour} alt="shape" loading="lazy" />
                                     </div>
                                 </div>
                             </div>
@@ -70,8 +73,8 @@ const Banner = () => {
                 </div>
             </div>
 
-            {/* Banner Pattern Vector*/}
-            <img className='banner-pattern' src={bannerPattern} alt="banner pattern" />
+            {/* Banner Pattern Vector */}
+            <img className='banner-pattern' src={bannerPattern} alt="banner pattern" loading="lazy" />
         </section>
     );
 };

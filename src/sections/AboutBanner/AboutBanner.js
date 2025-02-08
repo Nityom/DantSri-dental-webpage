@@ -25,9 +25,9 @@ const AboutBanner = () => {
                             </div>
                             <div className="col-lg-7">
                                 <div className="about-banner-img">
-                                    <img src={bannerOne} alt="about banner"/>
-                                    <img src={bannerTwo} alt="about banner two"/>
-                                    <img className='pattern' src={pattern} alt="about banner two"/>
+                                    <img src={bannerOne} alt="about banner" loading='lazy'/>
+                                    <img src={bannerTwo} alt="about banner two" loading='lazy'/>
+                                    <img className='pattern' src={pattern} alt="about banner two" loading='lazy'/>
                                 </div>
                             </div>
                         </div>

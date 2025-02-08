@@ -35,7 +35,7 @@ const Expert = () => {
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="expert-img">
-                            <img src={expertImg} alt="expert" />
+                            <img src={expertImg} alt="expert" loading="lazy" />
                         </div>
                     </div>
                 </div>

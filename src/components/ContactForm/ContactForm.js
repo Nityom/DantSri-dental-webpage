@@ -127,7 +127,7 @@ const ContactForm = () => {
     <div className="contact-header">
     <h2 className="appointment-title">Book Your Appointment</h2>
     <div className="contact-info">
-        <img src={icon} alt="Call Icon" className="call-icon" />
+        <img src={icon} alt="Call Icon" className="call-icon" loading="lazy" />
         <span className="call-number">083402 20139</span>
     </div>
 </div>

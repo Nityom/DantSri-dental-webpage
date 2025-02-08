@@ -30,7 +30,7 @@ const Navbar = () => {
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="/">
-                            <img src={logo} alt="Medist Logo" className="logo" />
+                            <img src={logo} alt="Medist Logo" className="logo" loading='lazy' />
                         </Link>
 
                         <button 

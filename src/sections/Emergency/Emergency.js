@@ -11,18 +11,16 @@ const Emergency = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6">
                         <div className="emergency-img">
-                            <img src={EmergencyImg} alt="Emergency" />
+                            <img src={EmergencyImg} alt="Emergency" loading="lazy" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="emergency-text">
-                        <SectionTitle 
-    subTitle="Dental 24H Emergency" 
-    title="Gentle, friendly treatment from our local experts." 
-    description="Immediate dental care available 24/7 for emergencies like toothaches, injuries, and urgent treatments."
-/>
-
-
+                            <SectionTitle 
+                                subTitle="Dental 24H Emergency" 
+                                title="Gentle, friendly treatment from our local experts." 
+                                description="Immediate dental care available 24/7 for emergencies like toothaches, injuries, and urgent treatments."
+                            />
                             <div className="theme-btn">
                                 <Link to='/contact'>Book an appointment</Link>
                             </div>

@@ -21,32 +21,32 @@ const Gallery = () => {
                 <div className="row">
                     <div className="col-md-5 col-sm-6">
                         <div className="gallery-img">
-                            <img src={imgOne} alt="gallery" />
+                            <img src={imgOne} alt="gallery" loading='lazy' />
                         </div>
                     </div>
                     <div className="col-md-3 col-sm-6">
                         <div className="gallery-img">
-                            <img src={imgTwo} alt="gallery" />
+                            <img src={imgTwo} alt="gallery" loading='lazy' />
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-6">
                         <div className="gallery-img">
-                            <img src={imgThree} alt="gallery" />
+                            <img src={imgThree} alt="gallery" loading='lazy' />
                         </div>
                     </div>
                     <div className="col-md-3 col-sm-6">
                         <div className="gallery-img">
-                            <img src={imgFour} alt="gallery" />
+                            <img src={imgFour} alt="gallery" loading='lazy' />
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-6">
                         <div className="gallery-img">
-                            <img src={imgFive} alt="gallery" />
+                            <img src={imgFive} alt="gallery" loading='lazy' />
                         </div>
                     </div>
                     <div className="col-md-5 col-sm-6">
                         <div className="gallery-img">
-                            <img src={imgSix} alt="gallery" />
+                            <img src={imgSix} alt="gallery" loading='lazy' />
                         </div>
                     </div>
                 </div>

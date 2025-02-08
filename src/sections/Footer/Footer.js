@@ -96,7 +96,7 @@ const Footer = () => {
         footerContacts.map((footerContact, index) => (
             <div className="contact-list" key={index}>
                 <div className="contact-icon">
-                    <img src={footerContact.icon} alt="call" />
+                    <img src={footerContact.icon} alt="call" loading='lazy' />
                 </div>
                 <div className="contact-text">
                     <p>{footerContact.title}</p>

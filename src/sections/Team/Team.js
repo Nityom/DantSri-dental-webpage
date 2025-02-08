@@ -43,7 +43,7 @@ const Team = () => {
                         <div className="col-lg-3 col-sm-6" key={index}>
                             <div className="team-card">
                                 <div className="team-img">
-                                    <img src={team.img} alt={team.name} />
+                                    <img src={team.img} alt={team.name} loading='lazy' />
                                 </div>
                                 <h3>{team.name}</h3>
                                 <h5>{team.designation}</h5>

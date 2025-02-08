@@ -11,7 +11,7 @@ const Priority = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6">
                         <div className="priority-img">
-                            <img src={priorityImg} alt="Emergency" />
+                            <img src={priorityImg} alt="Emergency" loading='lazy' />
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">

@@ -10,59 +10,50 @@ import { AiFillStar } from "react-icons/ai";
 import Slider from "react-slick";
 
 const Testimonial = () => {
-
     const testimonials = [
         {
             img: imgOne,
             name: 'Kalyani Kumari',
             description: 'Amazing dental experience! The staff was professional, and the treatment was painless. Highly recommended!',
-            ratings: [<AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />,]
+            ratings: Array(5).fill(<span aria-label="star"><AiFillStar /></span>)
         },
         {
             img: imgTwo,
             name: 'Suman Thakur',
             description: 'Best dental clinic I have visited! The doctors are highly skilled, and they made me feel so comfortable throughout the process.',
-            ratings: [<AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />]
+            ratings: Array(5).fill(<span aria-label="star"><AiFillStar /></span>)
         },
         {
             img: imgThree,
             name: 'Kapil Chaudhary',
             description: 'Exceptional service! The team was friendly, and my treatment was quick and effective. My smile has never looked better!',
-            ratings: [<AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />]
+            ratings: Array(5).fill(<span aria-label="star"><AiFillStar /></span>)
         },
         {
             img: imgFour,
             name: 'Govind Raut',
             description: 'I was nervous about my dental procedure, but the staff made me feel at ease. The results were fantastic!',
-            ratings: [<AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />, <AiFillStar />]
+            ratings: Array(5).fill(<span aria-label="star"><AiFillStar /></span>)
         }
     ];
 
-    // Slider settings without auto-scroll
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: true, // Keep navigation arrows
+        arrows: true,
         responsive: [
             {
                 breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 575,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -82,13 +73,12 @@ const Testimonial = () => {
                         />
                     </div>
                     <div className="col-lg-6">
-    <p className="pt-5">
-        See what our happy patients have to say about their experience with us and  
-        why they trust us with their smiles. Your journey to a healthier, brighter 
-        smile starts here!
-    </p>
-</div>
-
+                        <p className="pt-5">
+                            See what our happy patients have to say about their experience with us and  
+                            why they trust us with their smiles. Your journey to a healthier, brighter 
+                            smile starts here!
+                        </p>
+                    </div>
                 </div>
 
                 <Slider {...settings} className="testimoni-slider">

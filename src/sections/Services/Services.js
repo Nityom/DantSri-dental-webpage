@@ -3,9 +3,6 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import './Services.scss';
 import ServicesData from './ServiceData';
 import Service from '../../components/Service/Service';
-// import { Link } from 'react-router-dom';
-// import { BsFillArrowRightCircleFill } from "react-icons/bs";
-
 
 const Services = () => {
     return (
@@ -16,24 +13,19 @@ const Services = () => {
                         <SectionTitle title="Feel amazing about your oral health" subTitle="Services"/>
                     </div>
                     <div className="col-lg-6 col-sm-6">
-                    <p className='service-title-text'>At DantSri, your oral health is our priority. We offer personalized dental care tailored to your needs, ensuring a healthy and beautiful smile through expert services and preventive treatments.</p>
-
+                        <p className='service-title-text'>
+                            At DantSri, your oral health is our priority. We offer personalized dental care tailored 
+                            to your needs, ensuring a healthy and beautiful smile through expert services and preventive treatments.
+                        </p>
                     </div>
                 </div>
 
                 <div className="row">
-                    {
-                        ServicesData.map((singleService,index) => <Service key ={index} serviceList={singleService}/>)
-                    }
+                    {ServicesData.map((singleService, index) => (
+                        <Service key={index} serviceList={singleService} />
+                    ))}
                 </div>
             </div>
-
-            {/* <div className="services-link text-center">
-                <Link to='/'>
-                    View all service list
-                    <BsFillArrowRightCircleFill/>
-                </Link>
-            </div> */}
         </section>
     );
 };
