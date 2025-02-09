@@ -13,7 +13,7 @@ const Footer = () => {
             title: 'Clinic Address', 
             info: 'near JANTA COLLEGE, Jhanjharpur, Bihar, India, 847404', 
             icon: location,
-            link: 'https://maps.app.goo.gl/MmraPDqfGsAf6iJVA' // Added Google Maps Link
+            link: 'https://maps.app.goo.gl/MmraPDqfGsAf6iJVA'
         }
     ];
 
@@ -21,9 +21,8 @@ const Footer = () => {
         <footer className='footer-container pt-100 pb-70'>
             <div className="container">
                 <div className="row">
-                    {/* Left Section */}
                     <div className="col-lg-6 col-md-5">
-                        <h1 style={{ color: "white" }}>DantSri</h1>
+                        <h1>DantSri</h1>
                         <p>
                             Dental Care Seattle is a top-rated local practice offering expert cosmetic, 
                             preventative, and restorative dentistry on First Hill. Our dedicated team 
@@ -31,7 +30,6 @@ const Footer = () => {
                             for every patient.
                         </p>
 
-                        {/* Social Media */}
                         <div className="social-logo">
                             <p>Follow us on</p>
                             <ul>
@@ -43,7 +41,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Right Section - Contact Info */}
                     <div className="col-lg-4 col-md-5">
                         <div className="footer-contact">
                             <p>Contact & Information</p>
@@ -54,7 +51,6 @@ const Footer = () => {
                                     </div>
                                     <div className="contact-text">
                                         <p>{footerContact.title}</p>
-                                        {/* Conditionally wrap Clinic Address in an <a> tag */}
                                         {footerContact.link ? (
                                             <h5>
                                                 <a 
@@ -76,7 +72,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Copyright Section */}
                 <div className="copyright-area">
                     <div className='copy-text'>
                         <p>&copy; 2025 DantSri. All Rights Reserved</p>
