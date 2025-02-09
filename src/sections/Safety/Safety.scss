@@ -9,18 +9,40 @@
         }
     }
 
-   .safety-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto; // Centers the video horizontally
-    max-width: 560px; // Adjust width as needed
+
+
+
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; // 16:9 aspect ratio
+    height: 0;
+    overflow: hidden;
+    max-width: 90%; // Adjust for laptop screens
+    margin: 0 auto; // Centering
 
     iframe {
-        width: 100%; // Responsive width
-        height: 315px; // Adjust height as needed
-        border-radius: 10px; // Optional: Rounded corners
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
     }
 }
 
+// Make the video bigger on larger screens
+@media (min-width: 1024px) {
+    .video-wrapper {
+        max-width: 70%; // Increase width for laptops
+        padding-bottom: 40%; // Adjust aspect ratio for larger view
+    }
+}
+
+@media (min-width: 1440px) {
+    .video-wrapper {
+        max-width: 60%; // Even bigger on large screens
+        padding-bottom: 35%;
+    }
 }

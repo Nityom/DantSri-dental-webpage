@@ -17,19 +17,16 @@ const Safety = () => {
                     description="We uphold the highest standards of safety, ensuring a secure and comfortable experience for every client."
                 />
 
-                {/* Embedded YouTube Video */}
-                <div className="safety-video">
-    <iframe 
-        src="https://www.youtube.com/embed/f4jG8BCl5s0" 
-        title="Safety Measures - Your Well-being is Our Priority" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowFullScreen
-        aria-label="Embedded safety video from YouTube"
-        width="560" 
-        height="315"
-    ></iframe>
-</div>
-
+                {/* Responsive Embedded YouTube Video */}
+                <div className="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/f4jG8BCl5s0" 
+                        title="Safety Measures - Your Well-being is Our Priority" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen
+                        aria-label="Embedded safety video from YouTube"
+                    ></iframe>
+                </div>
             </div>
         </section>
     );
