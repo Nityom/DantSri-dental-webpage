@@ -50,13 +50,7 @@ const Team = () => {
                         <div className="col-lg-3 col-sm-6" key={index}>
                             <div className="team-card" role="group" aria-labelledby={`team-member-${index}`}>
                                 <div className="team-img">
-                                    <img 
-                                        src={team.img} 
-                                        alt={`Photo of ${team.name}`} 
-                                        loading='lazy' 
-                                        width="200" 
-                                        height="200"
-                                    />
+                                <img src={team.img} alt={team.name} loading='lazy' width="200" height="200"/>
                                 </div>
                                 <h3 id={`team-member-${index}`}>{team.name}</h3>
                                 <h5>{team.designation}</h5>
