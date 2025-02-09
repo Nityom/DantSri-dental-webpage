@@ -9,8 +9,18 @@
         }
     }
 
-    .safety-video {
-        max-width: 750px;
-        margin: auto;
+   .safety-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; // Centers the video horizontally
+    max-width: 560px; // Adjust width as needed
+
+    iframe {
+        width: 100%; // Responsive width
+        height: 315px; // Adjust height as needed
+        border-radius: 10px; // Optional: Rounded corners
     }
+}
+
 }

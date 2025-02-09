@@ -1,22 +1,27 @@
 import './App.scss';
-import Home from './pages/Home';
-import {Routes, Route} from 'react-router-dom';
-import About from './pages/About';
-import Services from './pages/Services';
-// import BlogsPage from './pages/BlogsPage';
-// import SingleBlog from './pages/SingleBlog/SingleBlog';
-import Contactus from './pages/Contact/Contactus';
+import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { lazy, Suspense } from 'react';
+import Loader from './components/Loader'; // Import animated loader component
+
+// Lazy Load Pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contactus = lazy(() => import('./pages/Contact/Contactus'));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/singleservice" element={<Services />} />
-      {/* <Route path="/blogs" element={<BlogsPage />} /> */}
-      {/* <Route path="/blog/:url" element={<SingleBlog />} /> */}
-      <Route path="/contact" element={<Contactus />} />
-    </Routes>
+    <HelmetProvider>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/singleservice" element={<Services />} />
+          <Route path="/contact" element={<Contactus />} />
+        </Routes>
+      </Suspense>
+    </HelmetProvider>
   );
 }
 

@@ -1,40 +1,78 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import './AboutBanner.scss';
-import bannerOne from '../../assets/about/banner/banner_1.png'
-import bannerTwo from '../../assets/about/banner/banner_2.png'
-import pattern from '../../assets/banner/pattern.png'
+import bannerOne from '../../assets/about/banner/banner_1.png';
+import bannerTwo from '../../assets/about/banner/banner_2.png';
+import pattern from '../../assets/banner/pattern.png';
 
 const AboutBanner = () => {
     return (
-        <section className='about-section' data-aos="fade-up" data-aos-duration="2000">
-            <div className="d-table">
-                <div className="d-table-cell">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-5">
-                                <div className="about-banner-text">
-                                    <h2>About Us</h2>
-                                    <p>Your smile is more than just teeth—it's confidence, laughter, and unforgettable moments.<br/> We’re here to ensure your oral wellness isn’t just a<br/> twice-a-year priority but a daily joy, every time you bite, laugh, or share a kiss.</p>
+        <>
+            {/* SEO Meta Tags */}
+            <Helmet>
+                <title>About DantSri - Best Dental Care in Bihar</title>
+                <meta 
+                    name="description" 
+                    content="DantSri provides expert dental care, ensuring bright smiles and healthy teeth. Visit us for cosmetic and preventive dentistry."
+                />
+                <meta 
+                    name="keywords" 
+                    content="dental care, best dentist, oral health, teeth cleaning, cosmetic dentistry, Bihar dental clinic"
+                />
+            </Helmet>
 
-
-                                    <div className="theme-btn">
-                                        <Link to='/contact'>Contact Us</Link>
-                                    </div>
+            <section className='about-section' data-aos="fade-up" data-aos-duration="2000">
+                <div className="d-table">
+                    <div className="d-table-cell">
+                        <div className="container">
+                            <div className="row align-items-center">
+                                {/* About Section Text */}
+                                <div className="col-lg-5">
+                                    <article className="about-banner-text">
+                                        <header>
+                                            <h2>Your Trusted Dental Care Partner</h2>
+                                        </header>
+                                        <p>
+                                            Your smile is confidence, laughter, and joy. 
+                                            At <strong>DantSri</strong>, we make oral wellness a daily priority—so you can 
+                                            bite, laugh, and smile with confidence.
+                                        </p>
+                                        <div className="theme-btn">
+                                            <Link to='/contact' aria-label="Contact DantSri for dental services">
+                                                Contact Us
+                                            </Link>
+                                        </div>
+                                    </article>
                                 </div>
-                            </div>
-                            <div className="col-lg-7">
-                                <div className="about-banner-img">
-                                    <img src={bannerOne} alt="about banner" loading='lazy'/>
-                                    <img src={bannerTwo} alt="about banner two" loading='lazy'/>
-                                    <img className='pattern' src={pattern} alt="about banner two" loading='lazy'/>
+
+                                {/* About Section Images */}
+                                <div className="col-lg-7">
+                                    <div className="about-banner-img">
+                                        <img 
+                                            src={bannerOne} 
+                                            alt="Smiling patient at DantSri dental clinic" 
+                                            loading='lazy'
+                                        />
+                                        <img 
+                                            src={bannerTwo} 
+                                            alt="Dentist performing a procedure at DantSri" 
+                                            loading='lazy'
+                                        />
+                                        <img 
+                                            className='pattern' 
+                                            src={pattern} 
+                                            alt="Decorative pattern background" 
+                                            loading='lazy'
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 

@@ -10,7 +10,7 @@ const Navbar = () => {
     const navbarItems = [
         { name: 'Home', path: '/' },
         { name: 'About Us', path: '/about' },
-        { name: 'Services', path: '/singleservice' },
+        { name: 'Services', path: '/singleservice' },  
         { name: 'Contact Us', path: '/contact' }
     ];
 
@@ -18,8 +18,11 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            requestAnimationFrame(() => {
+                setIsScrolled(window.scrollY > 50);
+            });
         };
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -30,26 +33,26 @@ const Navbar = () => {
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="/">
-                            <img src={logo} alt="Medist Logo" className="logo" loading='lazy' />
+                            <img src={logo} alt="Medist Logo" className="logo" loading="lazy" />
                         </Link>
 
-                        <button 
-                            className={`navbar-toggler ${isOpen ? 'open' : ''}`} 
-                            type="button" 
+                        <button
+                            className={`navbar-toggler ${isOpen ? 'open' : ''}`}
+                            type="button"
                             onClick={toggleMenu}
                             aria-controls="navbarContent"
                             aria-expanded={isOpen}
                             aria-label="Toggle navigation"
                         >
-                            <span className="navbar-toggler-icon"></span>
+                            <span className="navbar-toggler-icon"></span> 
                         </button>
 
                         <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarContent">
                             <ul className="navbar-nav m-auto">
                                 {navbarItems.map((item, index) => (
                                     <li className="nav-item" key={index}>
-                                        <Link 
-                                            className="nav-link" 
+                                        <Link
+                                            className="nav-link"
                                             to={item.path}
                                             onClick={() => setIsOpen(false)}
                                         >
@@ -60,7 +63,7 @@ const Navbar = () => {
                             </ul>
 
                             <div className="theme-btn">
-                                <Link to="/contact" className="btn-animate">Book appointment</Link>
+                                <Link to="/contact" className="btn-animate">Book Appointment</Link>
                             </div>
                         </div>
                     </div>

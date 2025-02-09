@@ -92,35 +92,6 @@ const Faq = () => {
                                 </div>
                             </div>
                         ))}
-
-                        {showMore && (
-                            [
-                                { id: 4, question: "What should I expect during a skin care consultation?", answer: "During a skin care consultation, our specialists will assess your skin type, discuss your concerns, and recommend a tailored treatment plan to meet your goals." },
-                                { id: 5, question: "How often should I get a facial treatment?", answer: "The frequency of facial treatments depends on your skin type and concerns. Generally, getting a facial every 4-6 weeks is recommended to maintain healthy skin." },
-                            
-                               
-                                { id: 6, question: "Are there any side effects of facial aesthetic treatments?", answer: "Most treatments have minimal side effects, such as mild redness or swelling, which subside within a few hours to days." },
-                                { id: 7, question: "Can I combine dental and facial aesthetic treatments?", answer: "Yes, we offer combined treatment plans to help you achieve both oral health and aesthetic goals conveniently." },
-                            ].map((faq) => (
-                                <div className="accordion-item" key={faq.id}>
-                                    <h2 className="accordion-header" id={`headingSkinCare${faq.id}`}>
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target={`#collapseSkinCare${faq.id}`}
-                                            aria-expanded="false"
-                                            aria-controls={`collapseSkinCare${faq.id}`}
-                                        >
-                                            {faq.question}
-                                        </button>
-                                    </h2>
-                                    <div id={`collapseSkinCare${faq.id}`} className="accordion-collapse collapse" aria-labelledby={`headingSkinCare${faq.id}`} data-bs-parent="#accordionSkinCare">
-                                        <div className="accordion-body">{faq.answer}</div>
-                                    </div>
-                                </div>
-                            ))
-                        )}
                     </div>
                 </div>
 

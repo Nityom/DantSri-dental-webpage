@@ -21,8 +21,14 @@ const Team = () => {
     ];
 
     return (
-        <section className='team-section pt-100' data-aos="fade-up" data-aos-duration="2000">
+        <section 
+            className='team-section pt-100' 
+            data-aos="fade-up" 
+            data-aos-duration="2000"
+            aria-labelledby="team-heading"
+        >
             <div className="container">
+                {/* Section Title & Introduction */}
                 <div className="row align-items-center">
                     <div className="col-lg-7">
                         <SectionTitle 
@@ -38,14 +44,21 @@ const Team = () => {
                     </div>
                 </div>
 
+                {/* Team Members */}
                 <div className="row">
                     {teams.map((team, index) => (
                         <div className="col-lg-3 col-sm-6" key={index}>
-                            <div className="team-card">
+                            <div className="team-card" role="group" aria-labelledby={`team-member-${index}`}>
                                 <div className="team-img">
-                                    <img src={team.img} alt={team.name} loading='lazy' />
+                                    <img 
+                                        src={team.img} 
+                                        alt={`Photo of ${team.name}`} 
+                                        loading='lazy' 
+                                        width="200" 
+                                        height="200"
+                                    />
                                 </div>
-                                <h3>{team.name}</h3>
+                                <h3 id={`team-member-${index}`}>{team.name}</h3>
                                 <h5>{team.designation}</h5>
                                 <p>{team.details}</p>
                             </div>

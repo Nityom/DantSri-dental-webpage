@@ -16,10 +16,11 @@ const TestimoniCard = ({testimonail}) => {
                     <p>{description}</p>
                 </div>
                 <ul className='testimonial-rating'>
-                    {
-                        ratings?.map (rating => <li>{rating}</li>)
-                    }
-                </ul>
+    {ratings?.map((rating, index) => (
+        <li key={index}>{rating}</li>
+    ))}
+</ul>
+
             </div>
         </div>
     );

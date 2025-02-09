@@ -6,25 +6,39 @@ import './Priority.scss';
 
 const Priority = () => {
     return (
-        <section className='priority-section emergency-section' data-aos="fade-up" data-aos-duration="2000">
+        <section 
+            className='priority-section emergency-section' 
+            data-aos="fade-up" 
+            data-aos-duration="2000"
+            aria-labelledby="priority-heading"
+        >
             <div className="container-fluid">
                 <div className="row align-items-center">
+                    {/* Image Section */}
                     <div className="col-lg-6 col-md-6">
                         <div className="priority-img">
-                            <img src={priorityImg} alt="Emergency" loading='lazy' />
+                            <img 
+                                src={priorityImg} 
+                                alt="Our priority is your dental care and comfort" 
+                                loading='lazy' 
+                                width="100%" 
+                                height="auto"
+                            />
                         </div>
                     </div>
+
+                    {/* Text Section */}
                     <div className="col-lg-6 col-md-6">
                         <div className="priority-text">
-                        <SectionTitle 
-    subTitle="OUR PRIORITY" 
-    title="Our Clients Come First"
-    description="We are dedicated to delivering top-notch care, ensuring your comfort, wellness, and satisfaction at every step."
-/>
+                            <SectionTitle 
+                                subTitle="OUR PRIORITY" 
+                                title="Our Clients Come First"
+                                description="We are dedicated to delivering top-notch care, ensuring your comfort, wellness, and satisfaction at every step."
+                            />
 
-
+                            {/* CTA Button */}
                             <div className="theme-btn">
-                                <Link to='/contact'>Book an appointment</Link>
+                                <Link to='/contact' aria-label="Book a dental appointment">Book an appointment</Link>
                             </div>
                         </div>
                     </div>
