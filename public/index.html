@@ -3,20 +3,58 @@
   <head>
     <meta charset="utf-8" />
     <!-- Favicon -->
-    <link rel="icon"  href="./favicon.png" />
-    <!-- Meta -->
+    <link rel="icon" href="./favicon.png" />
+    
+    
+    <!-- Meta for SEO -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="DantSri is a modern dental clinic offering a range of dental services with a focus on patient care, comfort, and cutting-edge technology."
     />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.dantsri.com/" />
+
+    <!-- Structured Data (Schema Markup) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "DentalClinic",
+        "name": "DantSri Dental Clinic",
+        "url": "https://www.dantsri.com",
+        "logo": "https://www.dantsri.com/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/DantSriDental",
+          "https://twitter.com/DantSriDental"
+        ]
+      }
+    </script>
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="DantSri - Dental Clinic" />
+    <meta property="og:description" content="DantSri is a modern dental clinic offering a range of dental services with a focus on patient care, comfort, and cutting-edge technology." />
+    <meta property="og:url" content="https://www.dantsri.com" />
+    <meta property="og:image" content="https://www.dantsri.com/og-image.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card for better preview -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DantSri - Dental Clinic" />
+    <meta name="twitter:description" content="DantSri is a modern dental clinic offering a range of dental services with a focus on patient care, comfort, and cutting-edge technology." />
+    <meta name="twitter:image" content="https://www.dantsri.com/og-image.jpg" />
+
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    
     <!-- Slider Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+    
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Title -->
     <title>DantSri - Dental Clinic</title>
   </head>
@@ -30,5 +68,6 @@
     <script>
       AOS.init();
     </script>
+
   </body>
 </html>

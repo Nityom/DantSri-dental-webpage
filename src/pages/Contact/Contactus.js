@@ -27,15 +27,20 @@ const Contactus = () => {
                     title="Contact Us"
                     description="Have questions or need to book an appointment? Reach out to us, and our friendly team will be happy to assist you."
                 />
+                
             </section>
 
-            {/* Contact Form */}
-            <main>
+            {/* Contact Details & Form */}
+            <main className="contact-container">
+              
+
+                {/* Contact Form */}
                 <section className='contact-form-area' data-aos="fade-up" data-aos-duration="2000" aria-label="Contact Form">
                     <ContactForm />
                 </section>
-                <Footer />
             </main>
+
+            <Footer />
         </>
     );
 };

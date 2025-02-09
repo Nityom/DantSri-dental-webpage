@@ -9,66 +9,71 @@ import service6 from '../../assets/servicePage/6.jpg';
 
 const services = [
     { 
-        title: 'Dental Services', 
-        description: 'We provide complete dental care, including routine check-ups, professional teeth cleaning, cavity fillings, root canals, and advanced cosmetic treatments such as teeth whitening, veneers, and dental implants. Our team of experienced dentists ensures a pain-free and comfortable experience for every patient.', 
+        title: 'Comprehensive Dental Care', 
+        description: 'We provide routine check-ups, teeth cleaning, cavity fillings, root canals, and advanced cosmetic treatments such as teeth whitening and dental implants.', 
         image: service1 
     },
     { 
-        title: 'Digital X-Ray', 
-        description: 'Using cutting-edge imaging technology, our digital X-ray services provide clear and accurate diagnostic images with minimal radiation exposure. This allows for precise treatment planning for dental, orthopedic, and general medical conditions, ensuring early detection and effective solutions.', 
+        title: 'Advanced Digital X-Ray', 
+        description: 'Our digital X-ray services ensure accurate diagnostic images with minimal radiation exposure for precise dental and orthopedic treatments.', 
         image: service2 
     },
     { 
-        title: 'Skin & Hair Treatments', 
-        description: 'Our expert dermatologists offer a wide range of skin and hair treatments, including acne treatment, anti-aging procedures, laser hair removal, hair regrowth therapy, and chemical peels. We use the latest technology to help you achieve healthy, glowing skin and strong, lustrous hair.', 
+        title: 'Skin & Hair Restoration', 
+        description: 'Offering acne treatment, anti-aging procedures, laser hair removal, and hair regrowth therapy using the latest dermatology advancements.', 
         image: service3 
     },
     { 
-        title: 'Pharmacy', 
-        description: 'Our well-stocked pharmacy provides a comprehensive selection of prescription medications, over-the-counter drugs, health supplements, and personal care products. We ensure the availability of high-quality, genuine medicines with expert guidance from our pharmacists for safe and effective use.', 
+        title: 'On-Site Pharmacy', 
+        description: 'Our well-stocked pharmacy provides prescription medications, supplements, and expert pharmacist guidance for optimal health.', 
         image: service4 
     },
     { 
-        title: 'Dr. Lal PathLabs', 
-        description: 'Partnering with Dr. Lal PathLabs, we offer a full range of diagnostic testing services, including blood tests, urine analysis, genetic screening, and specialized pathology tests. With state-of-the-art equipment and highly trained professionals, we ensure accurate results and timely reports for better health management.', 
+        title: 'Pathology & Diagnostic Tests', 
+        description: 'Partnering with Dr. Lal PathLabs, we offer accurate blood tests, genetic screenings, and pathology services with state-of-the-art technology.', 
         image: service5 
     },
     { 
-        title: 'Operation Theater', 
-        description: 'Our state-of-the-art operation theater is equipped with advanced surgical instruments, modern anesthesia systems, and highly trained medical professionals. We ensure a sterile and safe environment for minor and major surgical procedures, prioritizing patient care and recovery with world-class medical standards.', 
+        title: 'Modern Operation Theater', 
+        description: 'Equipped with advanced surgical instruments and anesthesia systems for minor and major medical procedures, ensuring a sterile and safe environment.', 
         image: service6 
     },
 ];
 
-
-
 const ServiceBanner = () => {
     return (
-        <section className="service-banner-section section-common section-bg">
+        <section className="service-banner-section section-common section-bg" itemScope itemType="https://schema.org/MedicalBusiness">
             <div className="container">
+             
                 {services.map((service, index) => (
-                    <div className={`row align-items-center service-item ${index % 2 !== 0 ? 'reverse' : ''}`} key={index}>
-                        {/* Left Content (Alternates) */}
+                    <article 
+                        className={`row align-items-center service-item ${index % 2 !== 0 ? 'reverse' : ''}`} 
+                        key={index}
+                        itemScope 
+                        itemType="https://schema.org/MedicalProcedure"
+                    >
+                        {/* Service Description */}
                         <div className={`col-lg-5 col-md-6 ${index % 2 !== 0 ? 'order-lg-2' : ''}`} data-aos="fade-up" data-aos-duration="2000">
                             <div className="service-banner-text">
-                                <h2>{service.title}</h2>
-                                <p>{service.description}</p>
+                                <h2 itemProp="name">{service.title}</h2>
+                                <p itemProp="description">{service.description}</p>
                             </div>
                         </div>
 
-                        {/* Right Image (Alternates) */}
+                        {/* Service Image */}
                         <div className={`col-lg-7 col-md-6 ${index % 2 !== 0 ? 'order-lg-1' : ''}`} data-aos="fade-up" data-aos-duration="2000">
-                            <div className="service-banner-img">
-                                <img src={service.image} alt={service.title} loading='lazy' />
-                            </div>
+                            <figure className="service-banner-img">
+                                <img 
+                                    src={service.image} 
+                                    alt={service.title} 
+                                    loading="lazy" 
+                                    itemProp="image"
+                                />
+                            </figure>
                         </div>
-                    </div>
+                    </article>
                 ))}
-                
-                {/* Centered "Book an Appointment" Button */}
-                {/* <div className="text-center mt-5">
-                    <Link to="/contact" className="theme-btn">Book an Appointment</Link>
-                </div> */}
+
             </div>
         </section>
     );

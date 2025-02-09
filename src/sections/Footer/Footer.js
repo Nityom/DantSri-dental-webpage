@@ -9,7 +9,12 @@ const Footer = () => {
     const footerContacts = [
         { title: 'Phone Number', info: '083402 20139', icon: call },
         { title: 'Open Hour', info: '09:00 AM - 18:00 PM', icon: time },
-        { title: 'Clinic Address', info: 'near JANTA COLLEGE, Jhanjharpur, Bihar, India, 847404', icon: location }
+        { 
+            title: 'Clinic Address', 
+            info: 'near JANTA COLLEGE, Jhanjharpur, Bihar, India, 847404', 
+            icon: location,
+            link: 'https://maps.app.goo.gl/MmraPDqfGsAf6iJVA' // Added Google Maps Link
+        }
     ];
 
     return (
@@ -49,7 +54,21 @@ const Footer = () => {
                                     </div>
                                     <div className="contact-text">
                                         <p>{footerContact.title}</p>
-                                        <h5>{footerContact.info}</h5>
+                                        {/* Conditionally wrap Clinic Address in an <a> tag */}
+                                        {footerContact.link ? (
+                                            <h5>
+                                                <a 
+                                                    href={footerContact.link} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                                >
+                                                    {footerContact.info}
+                                                </a>
+                                            </h5>
+                                        ) : (
+                                            <h5>{footerContact.info}</h5>
+                                        )}
                                     </div>
                                 </div>
                             ))}

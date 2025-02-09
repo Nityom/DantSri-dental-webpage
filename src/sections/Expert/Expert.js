@@ -7,10 +7,10 @@ import expertImg from '../../assets/expert.png';
 const Expert = () => {
     useEffect(() => {
         // SEO Optimization - Set Page Title & Meta Description
-        document.title = "Expert Dental Care | Seattle's Top Dentists";
+        document.title = "DantSri Dental Care";
         document.querySelector('meta[name="description"]').setAttribute(
             'content',
-            'Get expert dental care from Seattle’s top dentists. Our experienced professionals ensure comfort with advanced techniques and a patient-centered approach.'
+            'Get expert dental care from our top dentists. Our experienced professionals ensure comfort with advanced techniques and a patient-centered approach.'
         );
     }, []);
 
