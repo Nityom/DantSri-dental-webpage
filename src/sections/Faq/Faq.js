@@ -3,7 +3,8 @@ import './Faq.scss';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 const Faq = () => {
-    const [showMore, setShowMore] = useState(false);
+    const [showMoreDental, setShowMoreDental] = useState(false);
+    const [showMoreSkinCare, setShowMoreSkinCare] = useState(false);
 
     return (
         <section className='faq-section pt-100 pb-70' data-aos="fade-up" data-aos-duration="2000">
@@ -38,7 +39,7 @@ const Faq = () => {
                             </div>
                         ))}
 
-                        {showMore && (
+                        {showMoreDental && (
                             [
                                 { id: 4, question: "What is a root canal, and when is it needed?", answer: "A root canal is a treatment to repair and save a tooth that is badly decayed or infected." },
                                 { id: 5, question: "How can I whiten my teeth?", answer: "Teeth whitening can be achieved through professional treatments or home kits. Consult your dentist for the best option." },
@@ -64,6 +65,23 @@ const Faq = () => {
                                 </div>
                             ))
                         )}
+                    </div>
+
+                    {/* Show More/Less Button for Dental */}
+                    <div className="text-center mt-3">
+                        <button
+                            className="btn"
+                            style={{
+                                backgroundColor: '#583FBC',
+                                color: '#fff',
+                                padding: '10px 20px',
+                                borderRadius: '5px',
+                                transition: 'all 0.3s ease-in-out',
+                            }}
+                            onClick={() => setShowMoreDental(!showMoreDental)}
+                        >
+                            {showMoreDental ? "Show Less" : "Show More"}
+                        </button>
                     </div>
 
                     {/* Skin Care and Aesthetic Treatments Section */}
@@ -92,24 +110,51 @@ const Faq = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
 
-                {/* Show More / Show Less Button */}
-                <div className="text-center mt-4">
-                    <button
-                        className="btn transition-all duration-300 ease-in-out"
-                        style={{
-                            backgroundColor: '#583FBC',
-                            color: '#fff',
-                            padding: '10px 20px',
-                            borderRadius: '5px',
-                            transition: 'all 0.3s ease-in-out',
-                        }}
-                        onClick={() => setShowMore(!showMore)}
-                    >
-                        {showMore ? "Show Less" : "Show More"}
-                    </button>
+                        {showMoreSkinCare && (
+                            [
+                                { id: 4, question: "What should I expect during a skin care consultation?", answer: "Yes, when performed by a professional, chemical peels are safe and effective for skin rejuvenation." },
+                                { id: 5, question: "How often should I get Facial treatments?", answer: "The frequency of facial treatments depends on your skin type and concerns. Generally, getting a facial every 4-6 weeks is recommended to maintain healthy skin." },
+                                { id: 6, question: "Are there any side effects of facial aesthetic treatments?", answer: "Side effects of facial aesthetic treatments are generally minimal and may include temporary redness, swelling, or bruising. Our specialists ensure that all procedures are safe and suited to your needs." }, 
+                                { id: 7, question: "Can I combine dental and facial aesthetic treatments?", answer: "Yes, at DantSri Dental Care and Facial Aesthetic Centre, we offer combined treatment plans that address both dental health and facial aesthetics for a comprehensive approach to your well-being." }
+                            ].map((faq) => (
+                                <div className="accordion-item" key={faq.id}>
+                                    <h2 className="accordion-header" id={`headingSkinCare${faq.id}`}>
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target={`#collapseSkinCare${faq.id}`}
+                                            aria-expanded="false"
+                                            aria-controls={`collapseSkinCare${faq.id}`}
+                                        >
+                                            {faq.question}
+                                        </button>
+                                    </h2>
+                                    <div id={`collapseSkinCare${faq.id}`} className="accordion-collapse collapse" aria-labelledby={`headingSkinCare${faq.id}`} data-bs-parent="#accordionSkinCare">
+                                        <div className="accordion-body">{faq.answer}</div>
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                    </div>
+
+                    {/* Show More/Less Button for Skin Care */}
+                    <div className="text-center mt-3">
+                        <button
+                            className="btn"
+                            style={{
+                                backgroundColor: '#583FBC',
+                                color: '#fff',
+                                padding: '10px 20px',
+                                borderRadius: '5px',
+                                transition: 'all 0.3s ease-in-out',
+                            }}
+                            onClick={() => setShowMoreSkinCare(!showMoreSkinCare)}
+                        >
+                            {showMoreSkinCare ? "Show Less" : "Show More"}
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
