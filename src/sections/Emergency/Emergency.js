@@ -30,7 +30,7 @@ const Emergency = () => {
                         <div className="emergency-text">
                             <SectionTitle 
                                 subTitle="Dental 24H Emergency" 
-                                title="Gentle, friendly treatment from our local experts." 
+                                title="Gentle, friendly treatment from our oral experts." 
                                 description="Immediate dental care available 24/7 for emergencies like toothaches, injuries, and urgent treatments."
                             />
                             <div className="theme-btn">

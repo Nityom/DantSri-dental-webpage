@@ -1,20 +1,29 @@
 import React from 'react';
 import './Footer.scss';
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube,FaStar } from "react-icons/fa";
 import call from '../../assets/footer/calling.png';
 import time from '../../assets/footer/time.png';
 import location from '../../assets/footer/location.png';
 
+
+const reviewUrl = "https://search.google.com/local/writereview?placeid=ChIJjfu4Xop57jkR019nRoI7odQ"; // Google Review link
+
 const Footer = () => {
     const footerContacts = [
-        { title: 'Phone Number', info: '083402 20139', icon: call },
+        { 
+            title: 'Phone Number', 
+            info: '083402 20139', 
+            icon: call,
+            link: 'https://wa.me/918340220139'
+        },
         { title: 'Open Hour', info: '09:00 AM - 18:00 PM', icon: time },
         { 
             title: 'Clinic Address', 
             info: 'near JANTA COLLEGE, Jhanjharpur, Bihar, India, 847404', 
             icon: location,
             link: 'https://maps.app.goo.gl/MmraPDqfGsAf6iJVA'
-        }
+        },
+  
     ];
 
     return (
@@ -22,7 +31,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-5">
-                        <h1>DantSri</h1>
+                        <h1 style={{ color: "white" }}>DantSri</h1>
                         <p>
                             Dental Care Seattle is a top-rated local practice offering expert cosmetic, 
                             preventative, and restorative dentistry on First Hill. Our dedicated team 
@@ -68,6 +77,28 @@ const Footer = () => {
                                     </div>
                                 </div>
                             ))}
+
+                            {/* Google Review Section */}
+                   {/* Google Review Section */}
+<div className="contact-list">
+    <div className="contact-icon">
+        <FaStar style={{ fontSize: "24px", color: "#FFD700" }} />
+    </div>
+    <div className="contact-text">
+        <p>Write a Review</p>
+        <h5>
+            <a 
+                href={reviewUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+                Share Your Experience
+            </a>
+        </h5>
+    </div>
+</div>
+
                         </div>
                     </div>
                 </div>

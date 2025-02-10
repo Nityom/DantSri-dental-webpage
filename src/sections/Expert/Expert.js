@@ -25,7 +25,7 @@ const Expert = () => {
             className='expert-section' 
             data-aos="fade-up" 
             data-aos-duration="2000"
-            aria-label="Expert dental professionals in Seattle"
+            aria-label="Expert dental professionals"
         >
             <div className="container">
                 <div className="row align-items-center">
@@ -33,7 +33,7 @@ const Expert = () => {
                         <div className="expert-text">
                             <SectionTitle 
                                 subTitle="EXPERTS IN DENTAL"
-                                title="Top-notch dentistry, from Seattle's top dentists."
+                                title="Top-notch dentistry, from top dentists."
                                 description="Our experienced dental professionals provide comprehensive care, ensuring your comfort and well-being with advanced techniques and a patient-centered approach."
                             />
 

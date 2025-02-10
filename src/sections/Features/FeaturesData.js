@@ -10,9 +10,9 @@ const featuresData = [
         'description': 'We prioritize safety with health checks and more'
     },
     {
-        'icon': iconTwo,
-        'title': 'Insurance accepted',
-        'description': 'We’re in network with major insurers like Delta Dental, Aetna, and Cigna.'
+        icon: iconTwo,
+            'title': 'Comprehensive Care',
+            'description': 'Our experienced team provides preventive and restorative dental treatments tailored to your needs.'
     },
     {
         'icon': iconThree,

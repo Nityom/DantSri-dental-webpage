@@ -43,6 +43,30 @@ const ContactForm = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const handleDateChange = (e) => {
+        const selectedDate = new Date(e.target.value);
+        const today = new Date();
+        const nextMonth = new Date();
+        nextMonth.setMonth(today.getMonth() + 1);
+    
+        if (selectedDate.getDay() === 0) {
+            alert("Sundays are not available for appointments. Please select another day.");
+            setFormData({ ...formData, date: "" });
+        } else {
+            setFormData({ ...formData, date: e.target.value });
+        }
+    };
+    
+    // Format today's date and next month's date for input min/max attributes
+    const getFormattedDate = (date) => {
+        return date.toISOString().split("T")[0];
+    };
+    
+    const today = new Date();
+    const nextMonth = new Date();
+    nextMonth.setMonth(today.getMonth() + 1);
+    
+
     const generateTimeSlots = () => {
         let slots = [];
         let startHour = 10;
@@ -119,13 +143,22 @@ const ContactForm = () => {
 
     return (
         <section className="contact-form" itemScope itemType="https://schema.org/MedicalBusiness">
-            <div className="contact-header">
-                <h1 className="appointment-title" itemProp="name">Book Your Appointment</h1>
-                <div className="contact-info">
-                    <img src={icon} alt="Call us for appointment booking" className="call-icon" loading="lazy" />
-                    <span className="call-number" itemProp="telephone">083402 20139</span>
-                </div>
-            </div>
+           <div className="contact-header">
+    <h1 className="appointment-title" itemProp="name">Book Your Appointment</h1>
+    <div className="contact-info">
+        <img src={icon} alt="Call us for appointment booking" className="call-icon" loading="lazy" />
+        <a 
+            href="https://wa.me/918340220139" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="call-number"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+            083402 20139
+        </a>
+    </div>
+</div>
+
 
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -147,10 +180,21 @@ const ContactForm = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="date">Appointment Date</label>
-                    <input type="date" name="date" className="form-control" value={formData.date} onChange={handleChange} required aria-required="true" />
-                    {errors.date && <small className="error-text">{errors.date}</small>}
-                </div>
+    <label htmlFor="date">Appointment Date</label>
+    <input
+        type="date"
+        name="date"
+        className="form-control"
+        value={formData.date}
+        min={getFormattedDate(today)}
+        max={getFormattedDate(nextMonth)}
+        onChange={handleDateChange}
+        required
+        aria-required="true"
+    />
+    {errors.date && <small className="error-text">{errors.date}</small>}
+</div>
+
 
                 <div className="form-group">
                     <label htmlFor="time">Select Time</label>

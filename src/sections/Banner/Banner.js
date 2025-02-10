@@ -36,7 +36,10 @@ const Banner = () => {
                                     </div>
                                     <address className='call-text'>
                                         <p>Dental Care</p>
-                                        <h6 aria-label="Call us at 083402 20139">083402 20139</h6>
+                                        <a href="https://wa.me/918340220139" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+    <h6 aria-label="Chat with us on WhatsApp">083402 20139</h6>
+</a>
+
                                     </address>
                                 </div>
                             </div>
