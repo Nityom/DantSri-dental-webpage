@@ -14,7 +14,7 @@ const Safety = () => {
                 <SectionTitle 
                     subTitle="Safety First" 
                     title="Your Well-being is Our Priority"
-                    description="We uphold the highest standards of safety, ensuring a secure and comfortable experience for every client."
+                    description="We uphold the highest standards of safety, ensuring a secure and comfortable experience for every Patients."
                 />
 
                 {/* Responsive Embedded YouTube Video */}

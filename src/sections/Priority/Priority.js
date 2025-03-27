@@ -32,7 +32,7 @@ const Priority = () => {
                         <div className="priority-text">
                             <SectionTitle 
                                 subTitle="OUR PRIORITY" 
-                                title="Our Clients Come First"
+                                title="Our Patients Come First"
                                 description="We are dedicated to delivering top-notch care, ensuring your comfort, wellness, and satisfaction at every step."
                             />
 

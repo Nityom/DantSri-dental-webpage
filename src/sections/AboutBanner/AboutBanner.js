@@ -34,9 +34,7 @@ const AboutBanner = () => {
                                             <h2>Your Trusted Dental Care Partner</h2>
                                         </header>
                                         <p>
-                                            Your smile is confidence, laughter, and joy. 
-                                            At <strong>DantSri</strong>, we make oral wellness a daily priority—so you can 
-                                            bite, laugh, and smile with confidence.
+                                        Your smile is our pride. We make oral wellness on a daily priority, so you can eat,talk,laugh and smile with confidence.
                                         </p>
                                         <div className="theme-btn">
                                             <Link to='/contact' aria-label="Contact DantSri for dental services">

@@ -19,7 +19,7 @@ const Footer = () => {
         { title: 'Open Hour', info: '09:00 AM - 18:00 PM', icon: time },
         { 
             title: 'Clinic Address', 
-            info: 'near JANTA COLLEGE, Jhanjharpur, Bihar, India, 847404', 
+            info: 'Near JANTA COLLEGE, Jhanjharpur, Bihar, India, 847404', 
             icon: location,
             link: 'https://maps.app.goo.gl/MmraPDqfGsAf6iJVA'
         },
@@ -33,18 +33,15 @@ const Footer = () => {
                     <div className="col-lg-6 col-md-5">
                         <h1 style={{ color: "white" }}>DantSri</h1>
                         <p>
-                            Dental Care Seattle is a top-rated local practice offering expert cosmetic, 
-                            preventative, and restorative dentistry on First Hill. Our dedicated team 
-                            ensures personalized care, advanced treatments, and a comfortable experience 
-                            for every patient.
+                        Dental Care is a top-rated local practice specializing in cosmetic, preventative, and restorative dentistry. Our expert team is committed to providing personalized care, cutting-edge treatments, and a comfortable experience for every patient.
                         </p>
 
                         <div className="social-logo">
                             <p>Follow us on</p>
                             <ul>
-                                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a></li>
-                                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a></li>
-                                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a></li>
+                                <li><a href="https://www.facebook.com/Basudeodentalcare" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a></li>
+                                <li><a href="https://x.com/drjyoti_clinic" target="_blank" rel="noopener noreferrer"><FaTwitter /></a></li>
+                                <li><a href="https://www.instagram.com/dantsri_dental/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a></li>
                                 <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a></li>
                             </ul>
                         </div>

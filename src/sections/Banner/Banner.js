@@ -20,9 +20,10 @@ const Banner = () => {
                         <header className="banner-text" data-aos="fade-up" data-aos-duration="2000">
                             <h1>Your Smile Deserves the Best at DantSri</h1>
                             <p>
-                                At DantSri, we prioritize your dental health and aesthetics. Our skilled team is dedicated 
-                                to providing personalized care using advanced technology in a warm and welcoming environment. 
-                                We are here to help you achieve and maintain a beautiful smile.
+                            At DantSri, we prioritize your dental health and aesthetics. Our skilled team is 
+dedicated to provide personalized oral care by using 
+advanced technology in a warm and welcoming environment. 
+We are here to help you to achieve and maintain your beautiful smile.
                             </p>
 
                             <div className="banner-bottom">
@@ -58,7 +59,7 @@ const Banner = () => {
                                 </div>
                                 <div className='info-text'>
                                     <p>Dr. Jyoti</p>
-                                    <p><small>Cosmetologist, Trichologist, Dental Surgeon</small></p>
+                                    <p><small>Oro-Dental Surgeon, Cosmetologist, Trichologist</small></p>
                                 </div>
                             </div>  
 

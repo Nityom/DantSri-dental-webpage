@@ -24,20 +24,26 @@ const Services = () => {
                     </div>
                     <div className="col-lg-6 col-sm-12">
                         <p className='service-title-text'>
-                            At DantSri, your oral health is our priority. We offer personalized dental care tailored 
-                            to your needs, ensuring a healthy and beautiful smile through expert services and preventive treatments.
+                        Your oral health is our priority. We offer personalized dental care tailored your needs,ensuring a healthy and beautiful 
+                        smile through expert services and preventive treatments.
                         </p>
                     </div>
                 </div>
 
                 {/* Service List */}
                 <main>
-                    <div className="row">
-                        {ServicesData.map((service,index) => (
-                            <Service key={service.id || index} serviceList={service} />
-                        ))}
-                    </div>
-                </main>
+    <div className="row">
+        {ServicesData.slice(0, 3).map((service, index) => (
+            <Service key={service.id || index} serviceList={service} />
+        ))}
+    </div>
+    <div className="row">
+        {ServicesData.slice(3, 6).map((service, index) => (
+            <Service key={service.id || index} serviceList={service} />
+        ))}
+    </div>
+</main>
+
             </div>
         </section>
     );
