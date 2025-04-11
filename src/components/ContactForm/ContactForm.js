@@ -18,7 +18,7 @@ const ContactForm = () => {
     const [bookedSlots, setBookedSlots] = useState([]);
 
     const doctors = ["Dr. S.N. Prasad", "Dr. Jyoti"];
-    const locations = ["Location 1", "Location 2"];
+    const locations = ["Jhanjharpur", "Madhepur"];
 
     const timeSlots = [
         "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
