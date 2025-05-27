@@ -1,9 +1,9 @@
-@import '../../sass/colors.scss';
+@import "../../sass/colors.scss";
 
 .emergency-section {
     padding-top: 100px;
     padding-bottom: 150px;
-    
+
     .emergency-img {
         text-align: right;
         margin-right: 60px;
@@ -12,8 +12,8 @@
         margin-bottom: 30px;
 
         &::before {
-            position: absolute;
             content: "";
+            position: absolute;
             width: 45%;
             height: 125%;
             top: -12%;
@@ -32,7 +32,7 @@
             margin-bottom: 30px;
 
             h2 {
-                max-width: inherit;
+                max-width: unset;
             }
         }
 
@@ -42,11 +42,10 @@
     }
 }
 
-// Mobile Responsive
+// Small devices (phones)
 @media (max-width: 575px) {
     .emergency-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px 0;
 
         .emergency-img {
             margin-right: 0;
@@ -64,17 +63,19 @@
         }
     }
 }
+
+// Small to medium devices (portrait tablets)
 @media (min-width: 576px) and (max-width: 767px) {
     .emergency-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px 0;
 
         .emergency-img {
             text-align: center;
+
             &::before {
                 display: none;
             }
-        } 
+        }
 
         .emergency-text {
             .theme-btn {
@@ -84,23 +85,22 @@
     }
 }
 
-// Medium Device Responsive
+// Medium devices (landscape tablets)
 @media (min-width: 758px) and (max-width: 991px) {
     .emergency-section {
         padding-top: 0;
         padding-bottom: 50px;
 
         .emergency-img {
-            text-align: center;
             margin-right: 0;
+            text-align: center;
 
             &::before {
                 display: none;
             }
-        } 
+        }
 
         .emergency-text {
-
             .section-title {
                 h2 {
                     font-size: 25px;
