@@ -52,20 +52,20 @@ const Navbar = () => {
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
               <img
-                src={logo || "/placeholder.svg"}
-                alt="Medist Logo"
                 className="logo"
                 loading="lazy"
+                alt="Medist Logo"
+                src={logo || "/placeholder.svg"}
               />
             </Link>
 
             <button
-              className={`navbar-toggler ${menuOpen ? "open" : ""}`}
-              type="button"
+              aria-label="Toggle navigation"
               onClick={toggleMenu}
+              type="button"
               aria-controls="navbarContent"
               aria-expanded={menuOpen}
-              aria-label="Toggle navigation"
+              className={`navbar-toggler ${menuOpen ? "open" : ""}`}
             >
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -77,7 +77,7 @@ const Navbar = () => {
               <ul className="navbar-nav">
                 {NAV_ITEMS.map(({ name, path }, idx) => (
                   <li className="nav-item" key={idx}>
-                    <Link className="nav-link" to={path} onClick={closeMenu}>
+                    <Link onClick={closeMenu} className="nav-link" to={path}>
                       {name}
                     </Link>
                   </li>
@@ -87,8 +87,8 @@ const Navbar = () => {
               <div className="theme-btn">
                 <Link
                   to="/contact"
-                  className="btn-animate"
                   onClick={closeMenu}
+                  className="btn-animate"
                 >
                   Book Appointment
                 </Link>
