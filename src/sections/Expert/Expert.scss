@@ -13,19 +13,19 @@
 
     .expert-text {
         ul {
-            padding: 0;
             margin: 0;
+            padding: 0;
 
             li {
+                font-weight: 500;
                 list-style: none;
                 margin-bottom: 10px;
-                font-weight: 500;
 
                 svg {
-                    color: $color-blue;
-                    margin-right: 15px;
-                    top: -1px;
                     position: relative;
+                    color: $color-blue;
+                    top: -1px;
+                    margin-right: 15px;
                 }
             }
         }
@@ -33,23 +33,23 @@
 }
 
 .expert-img {
-        text-align: left;
-        margin-right: 60px;
-        position: relative;
-        z-index: 1;
-        margin-bottom: 30px;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    margin-bottom: 30px;
+    margin-right: 60px;
 
-        &::before {
-            position: absolute;
-            content: "";
-            width: 45%;
-            height: 125%;
-            top: -12%;
-            right: 0%;
-            background: #FADBE2;
-            z-index: -1;
-            border-radius: 20px;
-        }
+    &::before {
+        background: #FADBE2;
+        border-radius: 20px;
+        content: "";
+        height: 125%;
+        position: absolute;
+        right: 0%;
+        top: -12%;
+        width: 45%;
+        z-index: -1;
+    }
 }
 
 // Mobile Responsive
@@ -60,10 +60,10 @@
         .expert-text {
             ul {
                 margin-bottom: 10px;
-                
+
                 li {
-                    margin-bottom: 8px;
                     font-size: 14px;
+                    margin-bottom: 8px;
 
                     svg {
                         margin-right: 5px;
@@ -82,7 +82,7 @@
     }
 }
 
-@media (min-width: 576px) and (max-width:767px){
+@media (min-width: 576px) and (max-width: 767px) {
     .expert-section {
         padding: 50px 0;
 
@@ -101,7 +101,7 @@
 }
 
 // Medium Devices Responsive
-@media (min-width: 768px) and (max-width:991px){
+@media (min-width: 768px) and (max-width: 991px) {
     .expert-section {
         padding: 50px 0;
 
@@ -115,7 +115,7 @@
     }
 }
 
-@media (min-width: 992px) and (max-width:1199px){
+@media (min-width: 992px) and (max-width: 1199px) {
     .expert-section {
         padding: 70px 0;
 
@@ -130,7 +130,7 @@
 }
 
 // Large Device Responsive
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
     .expert-section {
         .expert-img {
             &::before {
