@@ -15,26 +15,27 @@ const Expert = () => {
     }, []);
 
     const expertList = [
-        "Top quality dental team",
-        "State of the art dental services",
-        "Customer satisfaction guaranteed"
+        "State of the Art Dental Services",
+        "Patient satisfaction guaranteed",
+                "Top quality dental team",
+        "Advanced dental technology",
     ];
 
     return (
         <section 
-            className='expert-section' 
             data-aos="fade-up" 
-            data-aos-duration="2000"
-            aria-label="Expert dental professionals"
+            aria-label="Expert dental professionals" 
+            data-aos-duration="2000" 
+            className='expert-section'
         >
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6">
                         <div className="expert-text">
                             <SectionTitle 
-                                subTitle="EXPERTS IN DENTAL"
+                                description="With a patient-centered approach, our experienced dental professionals deliver comprehensive care using advanced techniques, dedicated to your comfort and well-being."
                                 title="Top-notch dentistry, from top dentists."
-                                description="Our experienced dental professionals provide comprehensive care, ensuring your comfort and well-being with advanced techniques and a patient-centered approach."
+                                subTitle="EXPERTS IN DENTAL"
                             />
 
                             <ul>
@@ -49,9 +50,9 @@ const Expert = () => {
                     <div className="col-lg-6 col-md-6">
                         <div className="expert-img">
                             <img 
+                                loading="lazy" 
                                 src={expertImg} 
                                 alt="Experienced dental professionals at work" 
-                                loading="lazy" 
                             />
                         </div>
                     </div>

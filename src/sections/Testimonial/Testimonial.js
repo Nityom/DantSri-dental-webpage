@@ -1,13 +1,16 @@
 import React from 'react';
-import './Testimonial.scss';
+import Slider from "react-slick";
+import { AiFillStar, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import TestimoniCard from '../../components/TestimoniCard/TestimoniCard';
+
 import imgOne from '../../assets/testimonial/1.png';
 import imgTwo from '../../assets/testimonial/2.png';
 import imgThree from '../../assets/testimonial/3.png';
 import imgFour from '../../assets/testimonial/4.png';
-import TestimoniCard from '../../components/TestimoniCard/TestimoniCard';
-import { AiFillStar, AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import Slider from "react-slick";
+
+import './Testimonial.scss';
 
 // Custom Previous Arrow
 const PrevArrow = ({ onClick }) => (
@@ -26,32 +29,28 @@ const NextArrow = ({ onClick }) => (
 const Testimonial = () => {
     const testimonials = [
         {
-            img: imgOne,
-            name: 'Kalyani Kumari',
-            description: 'Amazing dental experience! The staff was professional, and the treatment was painless. Highly recommended!',
-            ratings: Array(5).fill(null).map((_, i) => <AiFillStar key={i} aria-label="star" />)
-
-        },
-        {
             img: imgTwo,
             name: 'Suman Thakur',
-            description: 'Best dental clinic I have visited! The doctors are highly skilled, and they made me feel so comfortable throughout the process.',
+            description: 'Absolutely the best dental experience I’ve ever had. The team is highly skilled and made the entire visit stress-free.',
             ratings: Array(5).fill(null).map((_, i) => <AiFillStar key={i} aria-label="star" />)
-
-        },
-        {
-            img: imgThree,
-            name: 'Kapil Chaudhary',
-            description: 'Exceptional service! The team was friendly, and my treatment was quick and effective. My smile has never looked better!',
-            ratings: Array(5).fill(null).map((_, i) => <AiFillStar key={i} aria-label="star" />)
-
         },
         {
             img: imgFour,
             name: 'Govind Raut',
-            description: 'I was nervous about my dental procedure, but the staff made me feel at ease. The results were fantastic!',
+            description: 'I was initially nervous, but the staff were incredibly calming. The final results exceeded my expectations!',
             ratings: Array(5).fill(null).map((_, i) => <AiFillStar key={i} aria-label="star" />)
-
+        },
+        {
+            img: imgOne,
+            name: 'Kalyani Kumari',
+            description: 'Wonderful experience! Everyone was so professional, and the procedure was smooth and painless.',
+            ratings: Array(5).fill(null).map((_, i) => <AiFillStar key={i} aria-label="star" />)
+        },
+        {
+            img: imgThree,
+            name: 'Kapil Chaudhary',
+            description: 'Fantastic service and quick treatment! The friendly staff made sure I felt comfortable throughout.',
+            ratings: Array(5).fill(null).map((_, i) => <AiFillStar key={i} aria-label="star" />)
         }
     ];
 
@@ -61,7 +60,7 @@ const Testimonial = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: true,  // Remove default arrows
+        arrows: true,
         prevArrow: <PrevArrow />,
         nextArrow: <NextArrow />,
         responsive: [
