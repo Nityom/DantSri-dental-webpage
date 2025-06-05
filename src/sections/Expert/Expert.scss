@@ -1,31 +1,31 @@
-@import '../../sass//colors.scss';
+@import '../../sass/colors.scss';
 
 .expert-section {
-    padding: 100px 0 150px 0px;
+    padding: 100px 0 150px;
 
     .section-title {
         margin-bottom: 30px;
 
         h2 {
-            max-width: inherit;
+            max-width: unset;
         }
     }
 
     .expert-text {
         ul {
-            margin: 0;
             padding: 0;
+            margin: 0;
 
             li {
+                list-style-type: none;
                 font-weight: 500;
-                list-style: none;
                 margin-bottom: 10px;
 
                 svg {
-                    position: relative;
                     color: $color-blue;
-                    top: -1px;
                     margin-right: 15px;
+                    position: relative;
+                    top: -1px;
                 }
             }
         }
@@ -33,26 +33,26 @@
 }
 
 .expert-img {
+    z-index: 1;
     position: relative;
     text-align: left;
-    z-index: 1;
-    margin-bottom: 30px;
     margin-right: 60px;
+    margin-bottom: 30px;
 
     &::before {
+        content: "";
+        position: absolute;
+        top: -12%;
+        right: 0%;
+        width: 45%;
+        height: 125%;
         background: #FADBE2;
         border-radius: 20px;
-        content: "";
-        height: 125%;
-        position: absolute;
-        right: 0%;
-        top: -12%;
-        width: 45%;
         z-index: -1;
     }
 }
 
-// Mobile Responsive
+// Small Devices
 @media (max-width: 575px) {
     .expert-section {
         padding: 50px 15px;
@@ -82,6 +82,7 @@
     }
 }
 
+// Medium Devices
 @media (min-width: 576px) and (max-width: 767px) {
     .expert-section {
         padding: 50px 0;
@@ -91,7 +92,7 @@
         }
 
         .expert-img {
-            margin-right: 0px;
+            margin-right: 0;
 
             &::before {
                 display: none;
@@ -100,7 +101,7 @@
     }
 }
 
-// Medium Devices Responsive
+// Tablets
 @media (min-width: 768px) and (max-width: 991px) {
     .expert-section {
         padding: 50px 0;
@@ -115,6 +116,7 @@
     }
 }
 
+// Desktops
 @media (min-width: 992px) and (max-width: 1199px) {
     .expert-section {
         padding: 70px 0;
@@ -129,7 +131,7 @@
     }
 }
 
-// Large Device Responsive
+// Large Screens
 @media (min-width: 1200px) {
     .expert-section {
         .expert-img {
