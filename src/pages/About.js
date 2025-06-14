@@ -38,7 +38,7 @@ const About = () => {
             {/* Page Structure */}
               <Navbar />
               <AboutBanner />
-             <Priority />
+              <Priority />
              <Safety />
              <Team />
              <Faq />
