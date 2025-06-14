@@ -1,139 +1,100 @@
-@import '../../sass/colors.scss';
+ @import '../../sass/colors.scss';
 
-.priority-section {
-    padding-bottom: 150px;
-    
-    .priority-img {
-        text-align: right;
-        margin-right: 60px;
-       
-        position: relative;
-        z-index: 1;
-        margin-bottom: 30px;
+ .priority-section {
+     padding-bottom: 150px;
 
-        &::before {
-            position: absolute;
-            content: "";
-            width: 45%;
-            height: 65%;
-            top: -12%;
-            left: 30%;
-            background: #DBEFFA;
-            z-index: -1;
-            border-radius: 20px;
-        }
-    }
-    .priority-img{
-        img{
-            border-radius: 20px;
-        }
-    }
+     .priority-img {
+         position: relative;
+         z-index: 1;
+         text-align: right;
+         margin: 0 60px 30px 0;
 
-    .priority-text {
-        max-width: 700px;
-        margin-bottom: 30px;
+         img {
+             border-radius: 20px;
+         }
 
-        .section-title {
-            margin-bottom: 30px;
+         &::before {
+             content: "";
+             position: absolute;
+             top: -12%;
+             left: 30%;
+             width: 45%;
+             height: 65%;
+             background: #DBEFFA;
+             border-radius: 20px;
+             z-index: -1;
+         }
+     }
 
-            h2 {
-                max-width: inherit;
-            }
-        }
+     .priority-text {
+         max-width: 700px;
+         margin-bottom: 30px;
 
-        .theme-btn {
-            margin-top: 80px;
-        }
-    }
-}
+         .section-title {
+             margin-bottom: 30px;
 
+             h2 {
+                 max-width: inherit;
+             }
+         }
 
-// Mobile Responsive
-@media (max-width: 575px) {
-    .priority-section {
-        padding-bottom: 20px;
+         .theme-btn {
+             margin-top: 80px;
+         }
+     }
+ }
 
-        .priority-img {
-            margin-right: 0;
+ // Responsive Styles
 
-            &::before {
-                display: none;
-            }
-        }
+ @media (max-width: 575px) {
+     .priority-section {
+         padding-bottom: 20px;
 
-        .priority-text {
-            .theme-btn {
-                margin-top: 20px;
-            }
-        }
-    }
-}
+         .priority-img {
+             margin-right: 0;
 
-@media (min-width: 576px) and (max-width: 767px) {
-    .priority-section {
-        padding-bottom: 70px;
+             &::before {
+                 display: none;
+             }
+         }
 
-        .priority-img {
-            margin-right: 0;
-            text-align: center;
+         .priority-text .theme-btn {
+             margin-top: 20px;
+         }
+     }
+ }
 
-            &::before {
-                display: none;
-            }
-        }
+ @media (min-width: 576px) and (max-width: 991px) {
+     .priority-section {
+         padding-bottom: 70px;
 
-        .priority-text {
-            .theme-btn {
-                margin-top: 0;
-            }
-        }
-    }
-}
+         .priority-img {
+             margin-right: 0;
+             text-align: center;
 
+             &::before {
+                 display: none;
+             }
+         }
 
-// Medium Device Responsive
-@media (min-width: 768px) and (max-width: 991px) {
-    .priority-section {
-        padding-bottom: 70px;
+         .priority-text .theme-btn {
+             margin-top: 0;
+         }
+     }
+ }
 
-        .priority-img {
-            margin-right: 0;
-            text-align: center;
+ @media (min-width: 992px) and (max-width: 1199px) {
+     .priority-section {
+         padding: 0 0 70px;
 
-            &::before {
-                display: none;
-            }
-        }
+         .priority-img::before {
+             display: none;
+         }
+     }
+ }
 
-        .priority-text {
-            .theme-btn {
-                margin-top: 0;
-            }
-        }
-    }
-}
-
-// Medium Device Responsive 
-@media (min-width: 991px) and (max-width: 1199px) {
-    .priority-section {
-        padding-bottom: 70px;
-        padding-top: 0px;
-
-        .priority-img {
-            &::before {
-                display: none;
-            }
-        }
-    }
-}
-
-// Large Device Responsive
-@media (min-width: 1200px) and (max-width: 1800px) {
-    .priority-section {
-        .priority-img {
-            &::before {
-                display: none;
-            }
-        }
-    }
-} 
+ @media (min-width: 1200px) and (max-width: 1800px) {
+     .priority-section .priority-img::before {
+         display: none;
+     }
+ }
