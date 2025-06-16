@@ -39,7 +39,7 @@ const About = () => {
               <Navbar />
               <AboutBanner />
               <Priority />
-             <Safety />
+              <Safety />
              <Team />
              <Faq />
              <Footer />
