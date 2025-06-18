@@ -1,112 +1,106 @@
-@import '../../sass/colors.scss';
+ @import '../../sass/colors.scss';
 
-.team-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 60px; // Reduced from 100px
+ .team-area {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+     padding-top: 60px;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 900px;
-    }
+     .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         max-width: 900px;
+     }
 
-    .section-title {
-        margin-bottom: 10px; // Reduced from default (removes extra gap)
-    }
+     .section-title {
+         margin-bottom: 10px;
+     }
 
-    .col-lg-5 {
-        padding-top: 0px !important; // Removed extra padding
-    }
+     .col-lg-5 {
+         padding-top: 0px !important;
+     }
 
-    .pt-5 {
-        padding-top: 10px !important; // Reduced from Bootstrap default
-    }
+     .intro-text {
+         padding-top: 10px !important;
+     }
 
-    .row {
-     
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; // Aligns all cards at the top
-            flex-wrap: wrap;
-            gap: 20px;
-        
-        
-    }
+     .row {
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         flex-wrap: wrap;
+         gap: 20px;
+     }
 
-    .team-card {
+     .team-box {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-start;
+         text-align: center;
+         height: 100%;
+         width: 100%;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            text-align: center;
-            height: 100%;
-            width: 100%; // Makes all cards equal height
-        
-        
+         .team-photo {
+             margin-bottom: 10px;
+             position: relative;
 
-        .team-img {
-            margin-bottom: 10px; // Reduced from 20px
-            position: relative;
+             &::before {
+                 content: '';
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 width: 100%;
+                 height: 100%;
+                 background: #DBEFFA;
+                 z-index: -1;
+                 border-radius: 10px;
+             }
 
-            &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                background: #DBEFFA;
-                content: '';
-                z-index: -1;
-                border-radius: 10px;
-            }
+             img {
+                 width: 100%;
+                 height: 250px;
+                 object-fit: cover;
+                 border-radius: 10px;
+             }
+         }
 
-            img {
-                width: 100%;
-    height: 250px; // Set a fixed height
-    object-fit: cover; // Ensures images scale properly
-    border-radius: 10px;
-            }
-        }
+         h3 {
+             font-size: 18px;
+             font-weight: 600;
+             margin-bottom: 5px;
+         }
 
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
+         h5 {
+             font-size: 16px;
+             font-weight: 500;
+             color: #666;
+         }
 
-        h5 {
-            font-size: 16px;
-            font-weight: 500;
-            color: #666;
-        }
+         p {
+             font-size: 14px;
+             color: #666;
+             margin-bottom: 0;
+         }
+     }
+ }
 
-        p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 0px;
-        }
-    }
-}
+ // Mobile Adjustments
+ @media (max-width: 575px) {
+     .team-area {
+         padding-top: 40px;
+     }
 
-// Small Device Responsive
-@media (max-width: 575px) {
-    .team-section {
-        padding-top: 40px;
-    }
+     .row {
+         flex-direction: column;
+         gap: 10px;
+     }
 
-    .row {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .col-lg-5 {
-        padding-top: 5px !important;
-    }
-}
+     .col-lg-5 {
+         padding-top: 5px !important;
+     }
+ }
