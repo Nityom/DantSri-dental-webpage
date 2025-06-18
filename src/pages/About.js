@@ -40,7 +40,7 @@ const About = () => {
               <AboutBanner />
               <Priority />
               <Safety />
-             <Team />
+              <Team />
              <Faq />
              <Footer />
         </>
