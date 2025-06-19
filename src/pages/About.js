@@ -41,7 +41,7 @@ const About = () => {
               <Priority />
               <Safety />
               <Team />
-             <Faq />
+              <Faq />
              <Footer />
         </>
     );
