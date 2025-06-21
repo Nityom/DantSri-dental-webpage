@@ -1,106 +1,108 @@
-.service-banner-section {
-    margin-top: 130px;
+ .service-banner-section {
+  margin-top: 130px;
 
-    .service-banner-text {
-        h2 {
-            font-size: 60px;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
+  .container {
+   margin-top: 20px;
+  }
 
-        p {
-            margin-bottom: 50px;
-        }
-    }
-    .container{
-        margin-top: 20px;
-    }
+  .service-banner-text {
+   h2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+   }
 
-    .service-banner-img {
-        text-align: center;
-        padding-top: 80px;
-        margin-bottom: -100px;
-        // height: 1px;
-        width: 100%; // Ensures responsiveness
-    // height: 250px; // Set a fixed height (adjust as needed)
-    object-fit: cover; // Ensures images maintain aspect ratio and cover the area
-   // Optional: Adds rounded corners
-   img{
+   p {
+    margin-bottom: 50px;
+   }
+  }
+
+  .service-banner-img {
+   text-align: center;
+   padding-top: 80px;
+   margin-bottom: -100px;
+   width: 100%;
+   object-fit: cover;
+
+   img {
     border-radius: 30px;
    }
+  }
+ }
+
+ .service-item {
+  margin-bottom: 80px;
+ }
+
+ @media (max-width: 575px) {
+  .service-banner-section {
+   margin-top: 70px;
+   padding: 30px 0 50px;
+
+   .service-banner-text {
+    text-align: center;
+
+    h2 {
+     font-size: 40px;
     }
-}
 
-// Mobile Responsive
-@media (max-width: 575px){
-    .service-banner-section {
-        margin-top: 70px;
-        padding: 30px 0 50px;
-
-        .service-banner-text {
-            text-align: center;
-
-            h2 {
-                font-size: 40px;
-            }
-            p {
-                margin-bottom: 20px;
-            }
-        }
-
-        .service-banner-img {
-            text-align: center;
-            padding-top: 20px;
-            margin-bottom: 0;
-        }
+    p {
+     margin-bottom: 20px;
     }
-}
-.service-item {
-    margin-bottom: 80px; // Adds space between each service section
-}
+   }
 
-@media (min-width:576px) and (max-width: 767px){
-    .service-banner-section {
-        margin-top: 70px;
-        padding: 30px 0 50px;
+   .service-banner-img {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0;
+   }
+  }
+ }
 
-        .service-banner-text {
-            text-align: center;
-            h2 {
-                font-size: 40px;
-            }
-            p {
-                margin-bottom: 20px;
-            }
-        }
+ @media (min-width: 576px) and (max-width: 767px) {
+  .service-banner-section {
+   margin-top: 70px;
+   padding: 30px 0 50px;
 
-        .service-banner-img {
-            text-align: center;
-            padding-top: 20px;
-            margin-bottom: 0;
-        }
+   .service-banner-text {
+    text-align: center;
+
+    h2 {
+     font-size: 40px;
     }
-}
 
-
-@media (min-width:768px) and (max-width: 991px){
-    .service-banner-section {
-        margin-top: 90px;
-        padding: 30px 0 50px;
-
-        .service-banner-text {
-            h2 {
-                font-size: 40px;
-            }
-            p {
-                margin-bottom: 20px;
-            }
-        }
-
-        .service-banner-img {
-            text-align: center;
-            padding-top: 20px;
-            margin-bottom: 0;
-        }
+    p {
+     margin-bottom: 20px;
     }
-}
+   }
+
+   .service-banner-img {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0;
+   }
+  }
+ }
+
+ @media (min-width: 768px) and (max-width: 991px) {
+  .service-banner-section {
+   margin-top: 90px;
+   padding: 30px 0 50px;
+
+   .service-banner-text {
+    h2 {
+     font-size: 40px;
+    }
+
+    p {
+     margin-bottom: 20px;
+    }
+   }
+
+   .service-banner-img {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0;
+   }
+  }
+ }
