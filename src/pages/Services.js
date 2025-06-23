@@ -12,7 +12,7 @@ const Services = () => {
              <Navbar />
              <ServiceBanner />
             {/* <Symptoms /> */}
-            <Gallery />
+             <Gallery />
             <Appointment />
             <Footer />
         </>
