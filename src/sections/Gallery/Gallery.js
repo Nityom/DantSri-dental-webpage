@@ -11,35 +11,38 @@
  import imgSix from '../../assets/servicePage/gallery/6.png';
 
  const images = [
-  { src: imgOne, alt: 'State-of-the-art dental facility' },
-  { src: imgTwo, alt: 'Expert dentist performing a procedure' },
-  { src: imgThree, alt: 'Happy patient after dental treatment' },
-  { src: imgFour, alt: 'Advanced dental equipment' },
-  { src: imgFive, alt: 'Comfortable waiting area' },
-  { src: imgSix, alt: 'Dentist consulting a patient' }
+  { src: imgOne, alt: 'Modern dental facility with advanced setup' },
+  { src: imgTwo, alt: 'Professional dentist conducting a procedure' },
+  { src: imgThree, alt: 'Smiling patient after receiving dental care' },
+  { src: imgFour, alt: 'Latest dental equipment in use' },
+  { src: imgFive, alt: 'Welcoming and relaxing waiting lounge' },
+  { src: imgSix, alt: 'Dentist consulting with a happy patient' }
  ];
 
  const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const handleImageClick = (src) => setSelectedImage(src);
+  const handleCloseLightbox = () => setSelectedImage(null);
+
   return (
-   <section className='gallery-section pt-100 pb-70' data-aos="fade-up" data-aos-duration="2000">
+   <section className='gallery-section pb-70 pt-100' data-aos="fade-up" data-aos-duration="2000">
     <div className="container">
      <SectionTitle
       subTitle="Our Gallery"
       title="See Our Care in Action"
-      description="Explore moments from our dental clinic, showcasing our state-of-the-art facilities, expert care, and happy smiles of our patients."
+      description="Take a glimpse into our clinic showcasing state-of-the-art tools, quality care, and happy patient moments."
      />
 
      <div className="row">
-      {images.map((image, index) => (
-       <div className="col-md-4 col-sm-6" key={index}>
-        <div className="gallery-img" onClick={() => setSelectedImage(image.src)}>
+      {images.map((image, idx) => (
+       <div className="col-sm-6 col-md-4" key={idx}>
+        <div className="gallery-img" onClick={() => handleImageClick(image.src)}>
          <img
+          loading="lazy"
           src={image.src}
           alt={image.alt}
-          loading='lazy'
-          className='img-fluid'
+          className="img-fluid"
          />
         </div>
        </div>
@@ -47,10 +50,11 @@
      </div>
 
      {selectedImage && (
-      <div className="lightbox" onClick={() => setSelectedImage(null)}>
+      <div className="lightbox" onClick={handleCloseLightbox}>
        <img
+        loading="lazy"
         src={selectedImage}
-        alt="Enlarged view"
+        alt="Zoomed gallery preview"
         className="lightbox-img"
        />
       </div>
