@@ -70,9 +70,9 @@
        >
         <figure className="service-banner-img">
          <img
+          loading="lazy"
           src={service.image}
           alt={service.title}
-          loading="lazy"
           itemProp="image"
          />
         </figure>
@@ -85,4 +85,3 @@
  };
 
  export default ServiceBanner;
-// This code defines a React component for a service banner section on a healthcare website.
