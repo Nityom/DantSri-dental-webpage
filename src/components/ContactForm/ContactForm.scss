@@ -1,78 +1,80 @@
-@import '../../sass/colors.scss';
+ @import '../../sass/colors.scss';
 
-.appointment-btn {
-    background: $color-blue;
-    color: $color-white;
-    padding: 14px 20px;
-    text-decoration: none;
-    border-radius: 15px;
-    transition: .3s;
-    border: 1px solid transparent;
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 20px;
-    display: inline-block;
+ .appointment-btn {
+  display: inline-block;
+  padding: 14px 20px;
+  margin-top: 20px;
 
-    &:hover {
-        background: $color-white;
-        color: $color-blue;
-        border: 1px solid $color-blue;
-    }
-}
+  background: $color-blue;
+  color: $color-white;
 
-.contact-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 2px solid #ddd;
-}
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 15px;
 
-.appointment-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-}
+  text-decoration: none;
+  transition: .3s;
 
-.contact-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+  &:hover {
+   background: $color-white;
+   color: $color-blue;
+   border: 1px solid $color-blue;
+  }
+ }
 
-.call-icon {
-    width: 24px;
-    height: 24px;
-}
+ .contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+ }
 
-.call-number {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
+ .appointment-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+ }
 
+ .contact-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+ }
 
-.text-right {
-    text-align: right;
-}
+ .call-icon {
+  width: 24px;
+  height: 24px;
+ }
 
-.form-group {
-    margin-bottom: 20px;
-    
-    label {
-        text-transform: uppercase;
-        color: #1819458a;
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
+ .call-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+ }
 
-    .form-control {
-        height: 50px;
-        border-radius: 14px;
-    }
+ .text-right {
+  text-align: right;
+ }
 
-    textarea {
-        height: 150px !important;
-    }
-}
+ .form-group {
+  margin-bottom: 20px;
+
+  label {
+   margin-bottom: 10px;
+   font-size: 16px;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #1819458a;
+  }
+
+  .form-control {
+   height: 50px;
+   border-radius: 14px;
+  }
+
+  textarea {
+   height: 150px !important;
+  }
+ }
