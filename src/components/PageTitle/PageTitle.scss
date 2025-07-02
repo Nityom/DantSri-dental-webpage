@@ -1,22 +1,23 @@
 .page-title {
-    text-align: center;
-    max-width: 650px;
-    margin: 150px auto 100px;
+  margin: 150px auto 100px;
+  max-width: 650px;
+  text-align: center;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+// Responsive for small screens
+@media (max-width: 575px) {
+  .page-title {
+    margin: 100px auto 50px;
 
     h2 {
-        font-size: 40px;
-        font-weight: 700;
-        margin-bottom: 10px;
+      font-size: 20px;
     }
+  }
 }
-
-// Small Device Responsive
-@media (max-width: 575px){
-    .page-title {
-        margin: 100px auto 50px;
-    
-        h2 {
-            font-size: 20px;
-        }
-    }
-}
+// Responsive for medium screens
