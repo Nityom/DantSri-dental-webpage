@@ -13,9 +13,9 @@ const Services = () => {
              <ServiceBanner />
             {/* <Symptoms /> */}
              <Gallery />
-            <Appointment />
-            <Footer />
-        </>
+             <Appointment />
+             <Footer />
+         </>
     );
 };
 
