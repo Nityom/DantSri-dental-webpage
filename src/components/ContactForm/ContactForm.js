@@ -1,5 +1,5 @@
  import React, { useState, useEffect } from "react";
- import { supabase } from "../../supabaseClient";
+// import { supabase } from "../../supabaseClient"; // Supabase removed
  import "./ContactForm.scss";
  import icon from "../../assets/banner/icons/Calling.png";
 
@@ -15,7 +15,7 @@
   });
 
   const [errors, setErrors] = useState({});
-  const [bookedSlots, setBookedSlots] = useState([]);
+    // const [bookedSlots, setBookedSlots] = useState([]); // Supabase removed
 
   const doctors = ["Dr. S.N. Prasad", "Dr. Jyoti"];
   const locations = ["Jhanjharpur", "Madhepur"];
@@ -27,22 +27,22 @@
    "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM", "08:00 PM"
   ];
 
-  useEffect(() => {
-   const fetchBookedSlots = async () => {
-    if (!formData.date) return;
-    const { data, error } = await supabase
-     .from("appointments")
-     .select("time")
-     .eq("date", formData.date);
-
-    if (error) {
-     console.error("Error fetching booked slots:", error);
-    } else {
-     setBookedSlots(data.map(slot => slot.time));
-    }
-   };
-   fetchBookedSlots();
-  }, [formData.date]);
+    // useEffect(() => {
+    //   const fetchBookedSlots = async () => {
+    //    if (!formData.date) return;
+    //    const { data, error } = await supabase
+    //     .from("appointments")
+    //     .select("time")
+    //     .eq("date", formData.date);
+    //
+    //    if (error) {
+    //     console.error("Error fetching booked slots:", error);
+    //    } else {
+    //     setBookedSlots(data.map(slot => slot.time));
+    //    }
+    //   };
+    //   fetchBookedSlots();
+    //  }, [formData.date]);
 
   const handleChange = (e) => {
    const { name, value } = e.target;
@@ -59,31 +59,17 @@
    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
-   e.preventDefault();
-
-   if (validateForm()) {
-    const { error } = await supabase
-     .from("appointments")
-     .insert([{ ...formData }]);
-
-    if (error) {
-     console.error("Error booking appointment:", error);
-     alert("Error booking appointment. Please try again.");
-    } else {
-     alert("Appointment booked successfully!");
-     setBookedSlots([...bookedSlots, formData.time]);
-
-     const whatsappMessage = `Hello, I would like to book an appointment. Here are my details:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Doctor: ${formData.doctor}\n- Location: ${formData.location}\n- Date: ${formData.date}\n- Time: ${formData.time}`;
-     const phoneNumber = "+917796308778";
-     const encodedMessage = encodeURIComponent(whatsappMessage);
-     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-     window.location.href = whatsappURL;
-
-     setFormData({ name: "", email: "", phone: "", doctor: "", location: "", date: "", time: "" });
-    }
-   }
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+            const whatsappMessage = `Hello, I would like to book an appointment. Here are my details:\n- Name: ${formData.name}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Doctor: ${formData.doctor}\n- Location: ${formData.location}\n- Date: ${formData.date}\n- Time: ${formData.time}`;
+            const phoneNumber = "+917796308778";
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.location.href = whatsappURL;
+            setFormData({ name: "", email: "", phone: "", doctor: "", location: "", date: "", time: "" });
+        }
+    };
 
   const validateForm = () => {
    const newErrors = {};
@@ -148,9 +134,9 @@
       <label htmlFor="time">Select Time</label>
       <select name="time" className="form-control" value={formData.time} onChange={handleChange} required>
        <option value="">Select a Time</option>
-       {timeSlots.filter(slot => !bookedSlots.includes(slot)).map((slot, index) => (
-        <option key={index} value={slot}>{slot}</option>
-       ))}
+    {timeSlots.map((slot, index) => (
+     <option key={index} value={slot}>{slot}</option>
+    ))}
       </select>
      </div>
 
